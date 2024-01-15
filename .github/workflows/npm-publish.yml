@@ -4,6 +4,10 @@ on:
   release:
     types: [created]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +16,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm i
+      - run: npm ci --omit=peer
+      - run: npm run lint --ws --if-present
       # - run: npm test
 
   publish-npm:
@@ -24,7 +29,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-      - run: npm i
+      - run: npm ci --omit=peer
       - run: npm run build --ws
       - run: npm publish --access public --ws
         env:
