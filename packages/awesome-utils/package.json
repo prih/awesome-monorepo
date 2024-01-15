@@ -1,0 +1,28 @@
+{
+  "name": "@prih/awesome-utils",
+  "version": "0.1.0",
+  "description": "Awesome Utils",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc --build --verbose",
+    "format": "prettier --write \"src/**/*.(js|ts)\"",
+    "lint": "eslint src --ext .js,.ts",
+    "lint:fix": "eslint src --fix --ext .js,.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prih/awesome-monorepo.git"
+  },
+  "author": "prih",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prih/awesome-monorepo/issues"
+  },
+  "homepage": "https://github.com/prih/awesome-monorepo#readme",
+  "files": [
+    "lib"
+  ]
+}
