@@ -1,6 +1,6 @@
 {
   "name": "@prih/awesome-core",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Awesome Core",
   "main": "lib/index.js",
   "scripts": {
@@ -24,6 +24,6 @@
     "lib"
   ],
   "dependencies": {
-    "@prih/awesome-utils": "^0.1.0"
+    "@prih/awesome-utils": "^0.2.1"
   }
 }
