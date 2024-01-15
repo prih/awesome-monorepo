@@ -10,5 +10,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "composite": true
-  }
+  },
+  "references": [
+    {
+      "path": "./packages/awesome-core"
+    },
+    {
+      "path": "./packages/awesome-utils"
+    }
+  ]
 }
